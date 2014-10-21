@@ -19,6 +19,9 @@ body{
     font-family: "helvetica", arial, sans-serif;
     background: $off-white;
 }
+p{
+    word-wrap: break-word;
+}
 
 /* Custom page header */
 .header {
@@ -91,6 +94,14 @@ body{
         font-size: 1.1em;
     }
 }
+.lead-copy--sm-screen{
+    font-size: 2.4em;
+    text-align: center;
+    padding: 0 0.5em;
+    color: $mid-dark-gray;
+    font-weight: 200;
+    margin-bottom: 4em;
+}
 
 .main-content{
     padding: 6em 1em 20em 1em;
@@ -136,9 +147,32 @@ body{
     }
 }
 
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
         max-width: 1080px;
     }
+    .only-sm-screen{
+        display: none; // use display none so *nobody* sees this
+    }
+}
+
+/* Responsive: below portrait tablets */
+@media screen and (max-width: 768px) {
+
+    .only-lg-screen{
+        display: none; // use display none so *nobody* sees this
+    }
+
+    .article{
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 1.5em;
+    }
+    .lead .lead-title{
+        margin-top: 50%;
+    }
+
 }
