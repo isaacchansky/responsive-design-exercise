@@ -1,0 +1,61 @@
+.article{
+    @include make-sm-column(4);
+    padding: 0 2.5em 0 2.5em;
+    margin-bottom: 2em;
+    .article-wrapper{
+        position: relative;
+        border-bottom: 4px solid $mid-gray;
+        border-top: 30px solid $light-blue;
+        background: $white;
+        &:before, &:after{
+            content: "";
+            position: absolute;
+            top:0;
+        }
+        &:after{
+            // subtle gray border to the right of articles.
+            // Using :after because we already have thick top/bottom
+            // borders on the article wrapper & this beats adding a new tag
+            right: 0;
+            height: 100%;
+            border-right: 1px solid $light-gray;
+        }
+        &:before{
+            // triangle shape, top left of article items
+            left:0;
+            width: 20px;
+            height: 20px;
+            border: 10px solid $light-blue;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+
+    }
+    .article-title{
+        display: inline-block;
+        margin: 2em 0 0.3em 1.2em;
+        padding-bottom:  0.3em;
+        font-size: 1.6em;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $light-blue;
+        border-bottom: 1px solid $light-gray;
+    }
+    .article-summary{
+        padding: 0 1.2em 2em 1.2em;
+        color: $mid-dark-gray;
+        font-weight: 300;
+        font-size: 1.2em;
+    }
+}
+
+/* Responsive: below portrait tablets */
+@media screen and (max-width: 768px) {
+
+    .article{
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 1.5em;
+    }
+
+}

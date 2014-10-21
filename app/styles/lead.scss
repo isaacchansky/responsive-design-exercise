@@ -1,0 +1,39 @@
+
+.lead{
+    padding-top: 75px; // account for fixed header
+    padding-bottom: 2em;
+    text-align: center;
+    background: $light-blue;
+    background: url("/images/nycbg.jpg") no-repeat center center;
+    background-size: cover;
+    .lead-title, .lead-copy{
+        color: $white;
+    }
+    .lead-title{
+        margin-top: 25%;
+        font-size: 3.3em;
+        font-weight: 600;
+    }
+    .lead-copy{
+        max-width: 33em;
+        margin: 0 auto;
+        font-size: 1.1em;
+    }
+}
+.lead-copy--sm-screen{
+    font-size: 2.4em;
+    text-align: center;
+    margin-bottom: 4em;
+    padding: 0 0.5em;
+    color: $mid-dark-gray;
+    font-weight: 200;
+}
+
+/* Responsive: below portrait tablets */
+@media screen and (max-width: 768px) {
+
+    .lead .lead-title{
+        margin-top: 50%;
+    }
+
+}

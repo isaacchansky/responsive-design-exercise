@@ -1,0 +1,32 @@
+
+body{
+    font-family: "helvetica", arial, sans-serif;
+    background: $off-white;
+}
+
+p{
+    word-wrap: break-word;
+}
+
+.main-content{
+    padding: 6em 1em 20em 1em;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1080px;
+    }
+    .only-sm-screen{
+        display: none; // use display none so *nobody* sees this
+    }
+}
+
+/* Responsive: below portrait tablets */
+@media screen and (max-width: 768px) {
+
+    .only-lg-screen{
+        display: none; // use display none so *nobody* sees this
+    }
+
+}
