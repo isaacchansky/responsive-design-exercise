@@ -17,7 +17,7 @@ $logo-gray_dark: #666666;
 
 body{
     font-family: "helvetica", arial, sans-serif;
-    padding-top: 75px; // account for fixed header
+    background: $off-white;
 }
 
 /* Custom page header */
@@ -62,8 +62,15 @@ body{
     }
 }
 
-/* Custom page footer */
-.footer {
+.lead{
+    padding-top: 75px; // account for fixed header
+    background: $light-blue;
+    .lead-title, .lead-copy{
+        color: $white;
+    }
+    .lead-title{
+        margin-top: 25%;
+    }
 }
 
 
